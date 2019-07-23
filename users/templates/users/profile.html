@@ -1,0 +1,19 @@
+{% extends "wmarkt/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+       </div>
+       {% if user.profile.image.url == '/media/default.jpg' %}
+       <div>
+          <p class="small">Graphics by: <a href="https://www.vecteezy.com">Vecteezy!</a></p>
+       </div>
+       {% endif %}
+      <!-- FORM HERE -->
+     </div>
+{% endblock content %}

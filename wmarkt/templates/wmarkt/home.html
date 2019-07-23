@@ -1,0 +1,15 @@
+{% extends "wmarkt/base.html" %}
+{% block content %}
+    {% for rezept in rezepte %}
+        <rezept class="media content-section">
+          <div class="media-body">
+            <div class="rezept-metadata">
+              <a class="mr-2" href="#">{{ rezept.author }}</a>
+              <small class="text-muted">{{ rezept.datum_erschienen|date:"F d, Y"}}</small>
+            </div>
+            <h2><a class="rezept-title" href="#">{{ rezept.name }}</a></h2>
+            <p class="rezept-content">{{ rezept.anleitung }}</p>
+          </div>
+        </rezept>
+    {% endfor %}
+{% endblock content %}
