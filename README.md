@@ -1,0 +1,2 @@
+# wochenmarkt
+Django recipe app
